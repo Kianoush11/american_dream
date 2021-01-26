@@ -73,6 +73,30 @@ bot.on("message",message=>{
   }
 });
 
+
+bot.on("message",message=>{
+
+  const everyoneRole = bot.guilds.get('787718236783247371').roles.find('name', '@everyone');
+  const name = message.author.username;
+
+  if (message.content === 'g.hub') {
+  message.guild.createChannel(name, 'dodo-test').then(r => {
+    
+    let cat = message.guild.find(c => c.name == "Hubs" && c.type == "category");
+
+    r.overwritePermissions(message.author.id, {VIEW_CHANNEL: true});
+    r.overwritePermissions(message.author.id, {MANAGE_CHANNEL: true});
+    r.overwritePermissions(message.author.id, {SEND_MESSAGES: true});
+    r.overwritePermissions(message.author.id, {MANAGE_MESSAGES: true});
+    r.overwritePermissions(message.author.id, {ATTACH_FILES: true});
+    r.overwritePermissions(message.author.id, {READ_MESSAGE_HISTORY: true});
+    r.overwritePermissions(message.author.id, {USE_EXTERNAL_EMOJIS: true});
+    r.overwritePermissions(everyoneRole, {SEND_MESSAGES: false});
+    r.setParent(cat.id);
+  });
+};
+
+  });
  
 
 
