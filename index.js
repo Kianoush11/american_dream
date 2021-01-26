@@ -80,22 +80,37 @@ bot.on("message",message=>{
   const name = message.author.username;
 
   if (message.content === 'g.hub') {
-  message.guild.createChannel(name + "' Hub", 'dodo-test').then(channel => {
-    
-    channel.overwritePermissions(message.author.id, {VIEW_CHANNEL: true});
-    channel.overwritePermissions(message.author.id, {MANAGE_CHANNEL: true});
-    channel.overwritePermissions(message.author.id, {SEND_MESSAGES: true});
-    channel.overwritePermissions(message.author.id, {MANAGE_MESSAGES: true});
-    channel.overwritePermissions(message.author.id, {ATTACH_FILES: true});
-    channel.overwritePermissions(message.author.id, {READ_MESSAGE_HISTORY: true});
-    channel.overwritePermissions(message.author.id, {USE_EXTERNAL_EMOJIS: true});
-    channel.overwritePermissions(everyoneRole, {SEND_MESSAGES: false});
-    channel.setParent('803631413127282739');
-  });
+  message.guild.createChannel(name + "hub", {
+    type: 'text',
+	  permissionOverwrites: [
+	  	{
+	  		id: message.guild.id,
+  			deny: ['VIEW_CHANNEL'],
+  		},
+  		{
+	  		id: message.author.id,
+	  		allow: ['VIEW_CHANNEL'],
+  		},
+
+  ]});
+  message.react('☑️');
 };
 
 });
  
+//.then(channel => {
+    
+  //channel.overwritePermissions(message.author.id, {VIEW_CHANNEL: true});
+  //channel.overwritePermissions(message.author.id, {MANAGE_CHANNEL: true});
+  //channel.overwritePermissions(message.author.id, {SEND_MESSAGES: true});
+  //channel.overwritePermissions(message.author.id, {MANAGE_MESSAGES: true});
+  //channel.overwritePermissions(message.author.id, {ATTACH_FILES: true});
+  //channel.overwritePermissions(message.author.id, {READ_MESSAGE_HISTORY: true});
+  //channel.overwritePermissions(message.author.id, {USE_EXTERNAL_EMOJIS: true});
+  //channel.overwritePermissions(everyoneRole, {SEND_MESSAGES: false});
+  //channel.setParent('803631413127282739');
+//});
+
 
 
 
