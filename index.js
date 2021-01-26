@@ -81,8 +81,6 @@ bot.on("message",message=>{
 
   if (message.content === 'g.hub') {
   message.guild.createChannel(name, 'dodo-test').then(r => {
-    
-    let cat = message.guild.find(c => c.name == "Hubs" && c.type == "category");
 
     r.overwritePermissions(message.author.id, {VIEW_CHANNEL: true});
     r.overwritePermissions(message.author.id, {MANAGE_CHANNEL: true});
@@ -92,6 +90,8 @@ bot.on("message",message=>{
     r.overwritePermissions(message.author.id, {READ_MESSAGE_HISTORY: true});
     r.overwritePermissions(message.author.id, {USE_EXTERNAL_EMOJIS: true});
     r.overwritePermissions(everyoneRole, {SEND_MESSAGES: false});
+    
+    let cat = message.guild.find(c => c.name == "Hubs" && c.type == "category");
     r.setParent(cat.id);
   });
 };
