@@ -85,12 +85,9 @@ bot.on("message",message=>{
 	  permissionOverwrites: [
 	  	{
 	  		id: message.guild.id,
-  			deny: ['VIEW_CHANNEL'],
+  			deny: ['VIEW_CHANNEL' && 'MANAGE_CHANNEL'],
       },
-      {
-        id: message.author.id,
-        allow: ['MANAGE_CHANNEL'],
-      }, 
+      
   		{
 	  		id: message.author.id,
 	  		allow: ['VIEW_CHANNEL'],
