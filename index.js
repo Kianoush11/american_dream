@@ -76,27 +76,33 @@ bot.on("message",message=>{
 
 bot.on("message",message=>{
 
-  const everyoneRole = bot.guilds.get('787718236783247371').roles.find('name', '@everyone');
   const name = message.author.username;
 
   if (message.content === 'g.hub') {
   message.guild.createChannel(name + "-hub", {
     type: 'text',
-	  permissionOverwrites: [
-	  	{
-	  		id: message.guild.id,
-  			deny: ['VIEW_CHANNEL'],
+  }).then(channel => {
+     channel.setParent("803631413127282739");
+    setTimeout(() => {
+      channel.send("Your Hub Created.");
+      channel.overwritePermissions([
+        {
+          id: message.guild.id,
+          deny: ['SEND_MESSAGES'],
       },
       {
-       id: message.author.id,
-       allow: [
-         'MANAGE_CHANNELS', 
+          id: message.author.id,
+          allow: [
+          'SEND_MESSAGES',
+          'MANAGE_CHANNELS',
+          'MANAGE_MESSAGES',
+          'ATTACH_FILES',
       ],
       },
-    ],
-  }).then(channel => {
-    channel.setParent("803631413127282739");
-    channel.send("Your Hub Created.");
+
+      ]);
+    }, 5000);
+    
   
   });
   var role = message.guild.roles.find(role => role.id === "803653309755162634");
