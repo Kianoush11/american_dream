@@ -76,11 +76,11 @@ bot.on("message",message=>{
 
 bot.on("message",message=>{
 
-  const everyoneRole = bot.guilds.get('').roles.cache.find('name', '@everyone');
+  const everyoneRole = bot.guilds.get('787718236783247371').roles.cache.find('name', '@everyone');
   const name = message.author.username;
 
   if (message.content === 'g.hub') {
-  message.guild.createChannel(name, 'X').then(r => {
+  message.guild.createChannel(name, 'dodo-test').then(r => {
     
     let cat = message.guild.cache.find(c => c.name == "Hubs" && c.type == "category");
 
