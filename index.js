@@ -82,7 +82,8 @@ bot.on("message",message=>{
   message.guild.createChannel(name + "-hub", {
     type: 'text',
   }).then(channel => {
-     channel.setParent("803631413127282739");
+     const catcat = '803631413127282739'
+     channel.setParent(catcat);
     setTimeout(() => {
       channel.send("Your Hub Created.");
       channel.overwritePermissions([
