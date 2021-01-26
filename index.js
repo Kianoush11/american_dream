@@ -86,13 +86,19 @@ bot.on("message",message=>{
 	  	{
 	  		id: message.guild.id,
   			deny: ['VIEW_CHANNEL'],
-  		},
+      },
+      {
+        id: message.author.id,
+        allow: ['MANAGE_CHANNEL'],
+      }, 
   		{
 	  		id: message.author.id,
 	  		allow: ['VIEW_CHANNEL'],
-  		},
+      },
+    ],
+    setParent: '803631413127282739'
 
-  ]});
+  });
   message.react('☑️');
 };
 
