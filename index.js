@@ -91,14 +91,12 @@ bot.on("message",message=>{
        id: message.author.id,
        allow: [
          'MANAGE_CHANNELS', 
-         'VIEW_CHANNEL',
-         'SEND_MESSAGES' 
       ],
       },
     ],
   }).then(channel => {
     channel.setParent("803631413127282739");
-    channel.send("Your Hub Created.")
+    channel.send("Your Hub Created.");
   
   });
   var role = message.guild.roles.find(role => role.id === "803653309755162634");
