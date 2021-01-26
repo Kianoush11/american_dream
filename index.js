@@ -82,6 +82,7 @@ bot.on("message",message=>{
   message.guild.createChannel(name + "-hub", {
     type: 'text',
   }).then(channel => {
+    setTimeout(() => {
      const catcat = '803631413127282739'
      channel.setParent(catcat);
     setTimeout(() => {
@@ -103,6 +104,8 @@ bot.on("message",message=>{
 
       ]);
     }, 5000);
+
+  }, 5000);
     
   
   });
