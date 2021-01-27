@@ -73,18 +73,18 @@ bot.on("message",message=>{
   }
 });
 
-const talkedRecently = new Set();
+
 
 bot.on("message",message=>{
 
   const name = message.author.username;
-  
-
-  if (talkedRecently.has(message.author.id)) {
-    message.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + message.author);
-} else {
+  const talkedRecently = new Set();
 
   if (message.content === 'g.hub') {
+
+    if (talkedRecently.has(message.author.id)) {
+      message.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + message.author);
+  } else {
     var role = message.guild.roles.find(role => role.id === "803653309755162634");
     message.author.addRole(role);
     message.react('☑️');
@@ -161,7 +161,7 @@ bot.on("ready", () => {
   setInterval(() => {
     targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        bot.user.setActivity(' نفر در گرین هیلز' + targetGuild.memberCount , {type: 'WATCHING'})
+        bot.user.setActivity('GreenHills Members : ' + targetGuild.memberCount , {type: 'WATCHING'})
               .then(console.log)
               .catch(console.error);
     }
