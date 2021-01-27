@@ -21,12 +21,12 @@ exports.run = (bot, msg, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['info'],
+  aliases: ['qr'],
   permLevel: 0
 };
 
 exports.help = {
-  name: "about",
+  name: "qrcode",
   description: "Bot Info",
   usage: "about"
 };
