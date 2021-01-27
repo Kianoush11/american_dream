@@ -158,10 +158,17 @@ bot.on('message', message => {
 bot.on("ready", () => {
 
   //ACTIVE
-
+  targetGuild = client.guilds.get('GUILD ID HERE')
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
-  bot.user.setActivity("WTF 700?!", { type: "WATCHING"});
-  log("GreenHills Bot by Kavisho is Running");
+  log('Im ready');
+  setInterval(() => {
+    targetGuild = client.guilds.get('GUILD ID HERE')
+    if(targetGuild) {
+        client.user.setPresence({ game: { name: targetGuild.memberCount + ' نفر در گرین هیلز!', type: 'WATCHING' }, status: 'online'  })
+              .then(console.log)
+              .catch(console.error);
+    }
+}, 1000 * 60 * 5);
 });
 
 bot.on("error", console.error);
