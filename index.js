@@ -161,9 +161,9 @@ bot.on("ready", () => {
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
   log('Im ready');
   setInterval(() => {
-    targetGuild = client.guilds.get('787718236783247371')
+    targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        client.user.setPresence({ game: { name: targetGuild.memberCount + ' نفر در گرین هیلز!', type: 'WATCHING' }, status: 'online'  })
+        bot.user.setActivity(targetGuild.memberCount + ' نفر در گرین هیلز!', {type: 'WATCHING'})
               .then(console.log)
               .catch(console.error);
     }
