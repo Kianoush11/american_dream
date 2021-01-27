@@ -79,7 +79,7 @@ bot.on("message",message=>{
   const name = message.author.username;
   const talkedRecently = new Set();
 
-  if (talkedRecently.has(msg.author.id)) {
+  if (talkedRecently.has(message.author.id)) {
     msg.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + msg.author);
 } else {
 
@@ -116,11 +116,11 @@ bot.on("message",message=>{
     message.channel.send(name + "Aziz hub shoma sakhteh shod.")
 
      // Adds the user to the set so that they can't talk for a minute
-     talkedRecently.add(msg.author.id);
+     talkedRecently.add(message.author.id);
      setTimeout(() => {
        // Removes the user from the set after a minute
-       talkedRecently.delete(msg.author.id);
-     }, 3000000);
+       talkedRecently.delete(message.author.id);
+     }, 8000000);
 
   };
 
@@ -158,7 +158,6 @@ bot.on('message', message => {
 bot.on("ready", () => {
 
   //ACTIVE
-  targetGuild = client.guilds.get('GUILD ID HERE')
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
   log('Im ready');
   setInterval(() => {
