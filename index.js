@@ -75,57 +75,7 @@ bot.on("message",message=>{
 
 
 
-bot.on("message",message=>{
 
-  const name = message.author.username;
-  const talkedRecently = new Set();
-
-  if (message.content === 'g.hub') {
-
-    if (talkedRecently.has(message.author.id)) {
-      message.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + message.author);
-  } else {
-    var role = message.guild.roles.find(role => role.id === "803653309755162634");
-    message.author.addRole(role);
-    message.react('☑️');
-    message.channel.send(name + " Aziz hub shoma sakhteh mishavad.")
-    message.guild.createChannel(name + "-hub", {
-      type: 'text',
-      overwritePermissions: [
-        {
-          id: message.guild.id,
-          allow: ['SEND_MESSAGES'],
-      },
-      {
-          id: message.author.id,
-          allow: ['MANAGE_CHANNELS'],
-      },
-      ]
-    }).then(channel => {
-      setTimeout(() => {
-        channel.send("هاب شما ساخته شد \n حتما چنل خود را به میل خود تنظیم کنید \n مطالب غیر اخلاقی پست نکنید \n هاب خود را مثبت هجده و یا حالت اخبار نکنید \n و اگر فعالیت کنید تیک میگیرید و اگر نه چنل شما پاک میشه");
-      }, 5000);
-      setTimeout(() => {
-        const catcat = '803631413127282739'
-        channel.setParent(catcat);
-    }, 5000);
-    
-    });
-    
-     // Adds the user to the set so that they can't talk for a minute
-     
-
-  };
-
-  talkedRecently.add(message.author.id);
-     setTimeout(() => {
-       // Removes the user from the set after a minute
-       talkedRecently.delete(message.author.id);
-     }, 8000000);
-}
-  
-
-});
  
 //.then(channel => {
     
