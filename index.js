@@ -113,7 +113,7 @@ bot.on("message",message=>{
     var role = message.guild.roles.find(role => role.id === "803653309755162634");
     message.member.addRole(role);
     message.react('☑️');
-    message.channel.send(name + "Aziz hub shoma sakhteh shod.")
+    message.channel.send(name + " Aziz hub shoma sakhteh shod.")
 
      // Adds the user to the set so that they can't talk for a minute
      talkedRecently.add(message.author.id);
@@ -161,7 +161,7 @@ bot.on("ready", () => {
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
   log('Im ready');
   setInterval(() => {
-    targetGuild = client.guilds.get('GUILD ID HERE')
+    targetGuild = client.guilds.get('787718236783247371')
     if(targetGuild) {
         client.user.setPresence({ game: { name: targetGuild.memberCount + ' نفر در گرین هیلز!', type: 'WATCHING' }, status: 'online'  })
               .then(console.log)
