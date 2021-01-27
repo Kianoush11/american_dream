@@ -77,42 +77,55 @@ bot.on("message",message=>{
 bot.on("message",message=>{
 
   const name = message.author.username;
+  const talkedRecently = new Set();
+
+  if (talkedRecently.has(msg.author.id)) {
+    msg.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + msg.author);
+} else {
 
   if (message.content === 'g.hub') {
-  message.guild.createChannel(name + "-hub", {
-    type: 'text',
-  }).then(channel => {
-    setTimeout(() => {
-     const catcat = '803631413127282739'
-     channel.setParent(catcat);
-    setTimeout(() => {
-      channel.send("Your Hub Created.");
-      channel.overwritePermissions([
+    message.guild.createChannel(name + "-hub", {
+      type: 'text',
+    }).then(channel => {
+      setTimeout(() => {
+       const catcat = '803631413127282739'
+       channel.setParent(catcat);
+      setTimeout(() => {
+        channel.send("هاب شما ساخته شد \n حتما چنل خود را به میل خود تنظیم کنید \n مطالب غیر اخلاقی پست نکنید \n هاب خود را مثبت هجده و یا حالت اخبار نکنید \n و اگر فعالیت کنید تیک میگیرید و اگر نه چنل شما پاک میشه");
+        channel.overwritePermissions([
+          {
+            id: message.guild.id,
+            allow: ['SEND_MESSAGES'],
+        },
         {
-          id: message.guild.id,
-          deny: ['SEND_MESSAGES'],
-      },
-      {
-          id: message.author.id,
-          allow: [
-          'SEND_MESSAGES',
-          'MANAGE_CHANNELS',
-          'MANAGE_MESSAGES',
-          'ATTACH_FILES',
-      ],
-      },
-
-      ]);
-    }, 5000);
-
-  }, 5000);
-    
+            id: message.author.id,
+            allow: ['MANAGE_CHANNELS'],
+        },
   
-  });
-  var role = message.guild.roles.find(role => role.id === "803653309755162634");
-  message.member.addRole(role);
-  message.react('☑️');
-};
+        ]);
+      }, 7000);
+  
+    }, 5000);
+      
+  
+    
+    });
+    var role = message.guild.roles.find(role => role.id === "803653309755162634");
+    message.member.addRole(role);
+    message.react('☑️');
+    message.channel.send(name + "Aziz hub shoma sakhteh shod.")
+
+     // Adds the user to the set so that they can't talk for a minute
+     talkedRecently.add(msg.author.id);
+     setTimeout(() => {
+       // Removes the user from the set after a minute
+       talkedRecently.delete(msg.author.id);
+     }, 3000000);
+
+  };
+
+}
+  
 
 });
  
