@@ -80,16 +80,13 @@ bot.on("message",message=>{
   const talkedRecently = new Set();
 
   if (talkedRecently.has(message.author.id)) {
-    msg.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + msg.author);
+    message.channel.send("یوزر گرامی لطفا بعدا دوباره تلاش کنید - " + message.author);
 } else {
 
   if (message.content === 'g.hub') {
     message.guild.createChannel(name + "-hub", {
       type: 'text',
     }).then(channel => {
-      setTimeout(() => {
-       const catcat = '803631413127282739'
-       channel.setParent(catcat);
       setTimeout(() => {
         channel.send("هاب شما ساخته شد \n حتما چنل خود را به میل خود تنظیم کنید \n مطالب غیر اخلاقی پست نکنید \n هاب خود را مثبت هجده و یا حالت اخبار نکنید \n و اگر فعالیت کنید تیک میگیرید و اگر نه چنل شما پاک میشه");
         channel.overwritePermissions([
@@ -106,9 +103,9 @@ bot.on("message",message=>{
       }, 7000);
   
     }, 5000);
-      
-  
-    
+    setTimeout(() => {
+      const catcat = '803631413127282739'
+      channel.setParent(catcat);
     });
     var role = message.guild.roles.find(role => role.id === "803653309755162634");
     message.member.addRole(role);
@@ -116,14 +113,15 @@ bot.on("message",message=>{
     message.channel.send(name + " Aziz hub shoma sakhteh shod.")
 
      // Adds the user to the set so that they can't talk for a minute
-     talkedRecently.add(message.author.id);
+     
+
+  };
+
+  talkedRecently.add(message.author.id);
      setTimeout(() => {
        // Removes the user from the set after a minute
        talkedRecently.delete(message.author.id);
      }, 8000000);
-
-  };
-
 }
   
 
@@ -163,7 +161,7 @@ bot.on("ready", () => {
   setInterval(() => {
     targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        bot.user.setActivity(targetGuild.memberCount + ' نفر در گرین هیلز!', {type: 'WATCHING'})
+        bot.user.setActivity(' نفر در گرین هیلز' + targetGuild.memberCount , {type: 'WATCHING'})
               .then(console.log)
               .catch(console.error);
     }
