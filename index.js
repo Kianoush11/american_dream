@@ -101,11 +101,11 @@ bot.on("message",message=>{
   
         ]);
       }, 7000);
-  
+      setTimeout(() => {
+        const catcat = '803631413127282739'
+        channel.setParent(catcat);
     }, 5000);
-    setTimeout(() => {
-      const catcat = '803631413127282739'
-      channel.setParent(catcat);
+    
     });
     var role = message.guild.roles.find(role => role.id === "803653309755162634");
     message.member.addRole(role);
