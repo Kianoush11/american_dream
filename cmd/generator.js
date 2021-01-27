@@ -56,15 +56,16 @@ const generator = [
     "||https://ptb.discord.com/store/skus/519249930611589141/sandboxes||",
   ];
    
-  //const talkedRecently = new Set();
+  const talkedRecently = new Set();
 
 
 
   exports.run = (bot, msg, params) => {
 
-    //  if (talkedRecently.has(msg.author.id)) {
-      //  msg.channel.send("یوزر گرامی لطفا 5 دقیقه بعد دوباره تلاش کنید - " + msg.author);
-//} else {
+
+      if (talkedRecently.has(msg.author.id)) {
+        msg.channel.send("یوزر گرامی لطفا 5 دقیقه بعد دوباره تلاش کنید - " + msg.author);
+} else {
 
   var emx = new Discord.RichEmbed()
   .setTitle("**G R Ξ Ξ N . G Ξ N Ξ R A T O R**", true)
@@ -76,13 +77,13 @@ const generator = [
   msg.react("☑️");
   
 
-    // Adds the user to the set so that they can't talk for a minute
-    //talkedRecently.add(msg.author.id);
-    //setTimeout(() => {
-      // Removes the user from the set after a minute
-      //talkedRecently.delete(msg.author.id);
-    //}, 300000);
-//}
+    //Adds the user to the set so that they can't talk for a minute
+    talkedRecently.add(msg.author.id);
+    setTimeout(() => {
+       //Removes the user from the set after a minute
+      talkedRecently.delete(msg.author.id);
+    }, 3000000);
+  }
 
   };
   
