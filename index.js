@@ -109,7 +109,7 @@ bot.on("ready", () => {
   setInterval(() => {
     targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        bot.user.setActivity('Members : ' + targetGuild.memberCount , {type: 'STREAMING', url: 'http://twitch.com/kavisho_official'})
+        bot.user.setActivity('In Members : ' + targetGuild.memberCount , {type: 'COMPETING'})
               .then(console.log)
               .catch(console.error);
     }
