@@ -13,7 +13,7 @@ exports.run = (bot, msg, params) => {
 		  .addField("**" + "User's Avatar :motorway: : " + "**", "g.avatar", false)
 		  .addField("**" + "About Bot :robot: : " + "**", "g.about", false)
       .setColor('RANDOM')
-      .setFooter("G R Ξ Ξ N H I L L S")
+      .setFooter("Tokyo NightClub")
 
   msg.channel.send({embed: invite});
 

@@ -4,7 +4,7 @@ exports.run = (bot, msg, params) => {
 
   var invite = new Discord.RichEmbed()
 
-          .setTitle("**WaitWut**", true)
+          .setTitle("**Tokyo NightClub**", true)
           .addField("**" + "Talking by bot : " + "**", " :open_mouth: g.speak", false)
           .addField("**" + "Shir ya Khat : " + "**", " :coin: g.coin", false)
           .addField("**" + "Dice : " + "**", " :six: g.dice", false)
@@ -14,7 +14,7 @@ exports.run = (bot, msg, params) => {
           .addField("**" + "Wallpapers :" + "**", " :cat: g.wallpaper", false)
           .addField("**" + "Your Love to that thing : " + "**", " :heart: g.love", false)
           .setColor('RANDOM')
-          .setFooter("G R Ξ Ξ N H I L L S")
+          .setFooter("Tokyo NightClub")
           
 
   msg.channel.send({embed: invite});

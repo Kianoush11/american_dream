@@ -30,7 +30,7 @@ var caty = [
     var invite = new Discord.RichEmbed()
      .setTitle(Quote[Math.floor(Math.random() * Quote.length)])
      .setImage(caty[Math.floor(Math.random() * caty.length)])
-     .setFooter("G R Ξ Ξ N H I L L S")
+     .setFooter("Tokyo NightClub")
      .setColor('RANDOM')
 
       msg.channel.send({embed: invite});

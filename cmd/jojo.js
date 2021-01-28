@@ -12,7 +12,7 @@ exports.run = (bot, msg, params) => {
           .addField("**" + "Speak by bot" + "**","g.speak", false)
           .addField("**" + "Suggest to warn/mute/kick/ban a user" + "**","g.suggest", false)
           
-          .setFooter("G R Ξ Ξ N H I L L S")
+          .setFooter("Tokyo NightClub")
           .setColor("0x#B73333")
 
   msg.channel.send({embed: invite});

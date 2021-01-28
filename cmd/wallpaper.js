@@ -36,21 +36,13 @@ var Wallpaper = [
     'https://cdn.discordapp.com/attachments/771487466464083991/771490320444948540/image5.jpg',
   ];
 
-  var RandomEm = [
-
-    "That's nice for you", 
-    "Legend humans need Legend Wallpapers :)", 
-    "Here is your nice wallpaper", 
-    "kobs kobs", 
-    "I'm Siamak Ansari.Im here to introduce this wallpaper"
-  ];
   
   exports.run = (bot, msg, params) => {
       
 
     
      var invite = new Discord.RichEmbed()
-     .setTitle(RandomEm[Math.floor(Math.random() * RandomEm.length)])
+     .setTitle("یک والپیپر مناسب شما")
      .setImage(Wallpaper[Math.floor(Math.random() * Wallpaper.length)])
      .setFooter("G R Ξ Ξ N H I L L S")
      .setColor('RANDOM')

@@ -27,6 +27,8 @@ fs.readdir("./cmd/", (err, files) => {
 
 bot.on("message", msg => {
 
+  
+
   var prefix = ("g.");
 
   if (msg.author.bot) return;
@@ -74,26 +76,35 @@ bot.on("message",message=>{
 });
 
 
+bot.on('message', message => {
 
+  if (message.content === 'g.key') {
+    if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
 
- 
-//.then(channel => {
+    let testedRole = message.guild.roles.get('804392803835838493');
+    let testedUser = message.mentions.members.first();
+    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا بهش کلید بدم").then((declineMsg) => { message.react('❌')
+    declineMsg.delete({timeout: 5000});
+    });
     
-  //channel.overwritePermissions(message.author.id, {VIEW_CHANNEL: true});
-  //channel.overwritePermissions(message.author.id, {MANAGE_CHANNEL: true});
-  //channel.overwritePermissions(message.author.id, {SEND_MESSAGES: true});
-  //channel.overwritePermissions(message.author.id, {MANAGE_MESSAGES: true});
-  //channel.overwritePermissions(message.author.id, {ATTACH_FILES: true});
-  //channel.overwritePermissions(message.author.id, {READ_MESSAGE_HISTORY: true});
-  //channel.overwritePermissions(message.author.id, {USE_EXTERNAL_EMOJIS: true});
-  //channel.overwritePermissions(everyoneRole, {SEND_MESSAGES: false});
-  //channel.setParent('803631413127282739');
-//});
+    testedUser.roles.add(testedRole);
+    message.channel.send("کلید پرایوت به ایشان تحویل داده شد")
+  }
 
+  if (message.content === 'g.keyr') {
+    if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
 
+    let testedRole = message.guild.roles.get('804392803835838493');
+    let testedUser = message.mentions.members.first();
+    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا کلید ازش بگیرم").then((declineMsg) => { message.react('❌')
+    declineMsg.delete({timeout: 5000});
+    });
+    
+    testedUser.roles.add(testedRole);
+    message.channel.send("کلید از ایشان صلب شد")
+  }
 
-
-
+});
 
 
 bot.on('message', message => {
@@ -103,7 +114,9 @@ bot.on('message', message => {
   }
 });
 
-bot.on("ready", () => {
+bot.on("ready", ready => {
+
+   ready.channel.join("")
 
   //ACTIVE
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
@@ -111,7 +124,7 @@ bot.on("ready", () => {
   setInterval(() => {
     targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        bot.user.setActivity('GreenHills Members : ' + targetGuild.memberCount , {type: 'WATCHING'})
+        bot.user.setActivity('Members : ' + targetGuild.memberCount , {type: 'STREAMING', url: 'http://twitch.com/kavisho_official'})
               .then(console.log)
               .catch(console.error);
     }

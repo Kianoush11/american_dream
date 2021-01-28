@@ -4,12 +4,12 @@ exports.run = (bot, msg, params) => {
 
   var invite = new Discord.RichEmbed()
 
-          .setTitle("**G R Ξ Ξ N H I L L S**", true)
+          .setTitle("**Tokyo NightClub**", true)
           .addField("__**" + "Developed In : " + "**__", ":flag_ir: by Kavisho with :heart:", true)
           .addField("__**" + "Code Language : " + "**__", "Javascript <:java:785151723207393300>", false)
           .addField("__**" + "Version : " + "**__", " 1.0 :robot: ", false)
 		      .addField("__**" + "Bot Status :" + "**__", "Configuring 🔧 ", true)
-          .setFooter("G R Ξ Ξ N H I L L S")
+          .setFooter("Tokyo NightClub")
           .setColor('RANDOM')
           //<:frozen:780376909451624468>
   msg.channel.send({embed: invite});
