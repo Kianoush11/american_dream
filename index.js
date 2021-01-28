@@ -83,26 +83,12 @@ bot.on('message', message => {
 
     let testedRole = message.guild.roles.get('804392803835838493');
     let testedUser = message.mentions.members.first();
-    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا بهش کلید بدم").then((declineMsg) => { message.react('❌')
-    declineMsg.delete({timeout: 5000});
-    });
+    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا بهش کلید بدم")
+  
     
     testedUser.roles.add(testedRole);
     message.channel.send("کلید پرایوت به ایشان تحویل داده شد")
-  }
-
-  if (message.content === 'g.keyr') {
-    if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
-
-    let testedRole = message.guild.roles.get('804392803835838493');
-    let testedUser = message.mentions.members.first();
-    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا کلید ازش بگیرم").then((declineMsg) => { message.react('❌')
-    declineMsg.delete({timeout: 5000});
-    });
-    
-    testedUser.roles.add(testedRole);
-    message.channel.send("کلید از ایشان صلب شد")
-  }
+  };
 
 });
 
@@ -114,9 +100,8 @@ bot.on('message', message => {
   }
 });
 
-bot.on("ready", ready => {
+bot.on("ready", () => {
 
-   ready.channel.join("")
 
   //ACTIVE
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
