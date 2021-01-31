@@ -14,7 +14,7 @@ exports.run = (bot, msg, params) => {
           .addField("**" + "Wallpapers :" + "**", " :cat: g.wallpaper", false)
           .addField("**" + "Your Love to that thing : " + "**", " :heart: g.love", false)
           .setColor('RANDOM')
-          .setFooter("Tokyo NightClub")
+          .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
           
 
   msg.channel.send({embed: invite});

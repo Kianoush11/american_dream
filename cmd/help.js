@@ -9,7 +9,7 @@ exports.run = (bot, msg, params) => {
       .addField("**" + " Tools :tools: " + "**", " g.tools", false)
       .addField("**" + " Moderation :closed_lock_with_key:" + "**", "g.mod", false)
 		  .addField("**" + " WaitWut <:normal:779270062087077908> " + "**", " g.wat ", false)
-		  .setFooter("Tokyo NightClub")
+		  .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
       .setColor("0x#295d7f")
 
   msg.channel.send({embed: invite});

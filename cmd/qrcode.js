@@ -11,7 +11,7 @@ exports.run = (bot, msg, params) => {
 
           .setTitle("**بارکد شما ساخته شد**", true)
           .setImage(`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${params.join(" ")}`)
-          .setFooter("Tokyo NughtClub")
+          .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
           .setColor('RANDOM')
           //<:frozen:780376909451624468>
   msg.channel.send({embed: invite});

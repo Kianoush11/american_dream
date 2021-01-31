@@ -109,7 +109,7 @@ bot.on("ready", () => {
   setInterval(() => {
     targetGuild = bot.guilds.get('787718236783247371')
     if(targetGuild) {
-        bot.user.setActivity('In Members : ' + targetGuild.memberCount , {type: 'COMPETING'})
+        bot.user.setActivity('With ' + targetGuild.memberCount + ' Members.', {type: 'PLAYING'})
               .then(console.log)
               .catch(console.error);
     }
