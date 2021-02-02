@@ -19,7 +19,7 @@ exports.run = (bot, msg, params) => {
 
     
     if (talkedRecently.has(msg.author.id)) {
-        msg.channel.react('❌');
+        msg.react('❌');
 } else {
 
 
@@ -29,7 +29,7 @@ exports.run = (bot, msg, params) => {
           //.setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
           //.setColor('RANDOM')
           //<:frozen:780376909451624468>
-  msg.channel.send("<:kachal:806044487675281409> <:sigar:806047101863591936>");
+  msg.channel.send("<:kachal:806044487675281409>smoke");
   msg.channel.send(ab[Math.floor(Math.random() * ab.length)]);
 
 };
