@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const { Canvas } = require('canvas-constructor');
+const { Canvas } = require("canvas-constructor");
 
 exports.run = async (bot, message, args) => {
      
