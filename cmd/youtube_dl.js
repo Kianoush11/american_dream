@@ -15,7 +15,7 @@ exports.run = async (bot, message, args) => {
     ///.setDescription(`[Audio](https://www.y2mate.com/youtube-mp3/${question})\n\n[Video](https://www.y2mate.com/youtube/${question})`)
     //.setFooter("Note : cannot download videos with copyrights!")
     
-    //.setColor('#c91417')
+    //.setColor('#c91417').
      
     let mage = new Canvas(1000, 800)
     .setColor("#ff2050")
