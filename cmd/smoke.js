@@ -29,7 +29,7 @@ exports.run = (bot, msg, params) => {
           //.setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
           //.setColor('RANDOM')
           //<:frozen:780376909451624468>
-  msg.channel.send("<:kachal:806044487675281409>:smoke:");
+  msg.channel.send("<:kachal:806044487675281409>:smoking:");
   msg.channel.send(ab[Math.floor(Math.random() * ab.length)]);
 
 };
