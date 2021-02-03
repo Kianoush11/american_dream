@@ -18,6 +18,7 @@ exports.run = (bot, message, params, text) => {
         ' Site : pornhub.com',
         ' Site : sexVideos.com',
         ' Site : kosnx.com',
+        'Shad.medu.ir',
         ' Site : brazzers.com',
         ' Site : sex.com',
         ' Site : porneslami.com',
@@ -76,7 +77,7 @@ message.channel.send(`هک کـــردن** این ممبر شروع شد**`+`\t
                                 setTimeout(function(){
                                     msg.edit(`<:kachal:788678025037479946> **وای صاحب اک اومد**`);
                                     setTimeout(function(){
-                                        msg.edit("هــک کردن این یارو  تموم شد");
+                                        msg.edit("هــک کردن این یارو تموم شد");
                                       }, 2000)
                                   }, 2000)
                               }, 2000)

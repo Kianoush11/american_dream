@@ -45,7 +45,7 @@ setTimeout(() => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['info'],
+  aliases: ['sigar'],
   permLevel: 0
 };
 

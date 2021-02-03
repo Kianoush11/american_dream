@@ -7,9 +7,7 @@ const ab = [
     "آب کیر خوبی بود", 
     "عرق نخور", 
     "عجب ویسکی ای زدی ناموسا", 
-
-
-
+    "دلستر لیمویی میخوری بعد جوگیر میشی؟",
 
 ];
 
@@ -45,7 +43,7 @@ setTimeout(() => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['info'],
+  aliases: [],
   permLevel: 0
 };
 
