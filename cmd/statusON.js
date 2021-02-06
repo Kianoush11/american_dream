@@ -10,15 +10,14 @@
       return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
     };
 
-    //let testedRole = message.guild.roles.get('804392803835838493');
-    //let testedUser = message.mentions.members.first();
 
     msg.channel.bulkDelete(10);
     
     const embod = new Discord.RichEmbed()
     .setColor('GREEN')
     .setTitle("GreenKing")
-    .setDescription(`Server Ip Address : ${params.join(" ")} \n Server Password : iranrp \n Status : Online`)
+    .setTimestamp()
+    .setDescription(`Server Ip Address : ${params.join(" ")} \nServer Password : iranrp \nStatus : Online`)
     
     msg.channel.send({embed: embod});
     
