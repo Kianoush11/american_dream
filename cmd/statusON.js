@@ -4,7 +4,7 @@
 
     exports.run = (bot, msg, params) => {
 
-        if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
+        if (!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(msg.react(':x:'))
 
     if(!params.join(" ")){
       return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
