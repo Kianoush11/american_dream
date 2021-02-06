@@ -146,6 +146,6 @@ bot.elevation = function (msg) {
   let admin_role = msg.guild.roles.find("name", "Can Use GH Bot cmds");
   if (admin_role && msg.member.roles.has(789036377056477184)) permlvl = 3;
 
-  if (msg.author.id === "750008103096942683" || "685851502673264660") permlvl = 4;
+  if (msg.author.id === "750008103096942683") permlvl = 4;
   return permlvl;
 };

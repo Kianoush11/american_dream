@@ -12,6 +12,8 @@
 
     //let testedRole = message.guild.roles.get('804392803835838493');
     //let testedUser = message.mentions.members.first();
+
+    msg.channel.bulkDelete(10);
     
     const embod = new Discord.RichEmbed()
     .setColor('GREEN')
@@ -27,12 +29,12 @@
     exports.conf = {
       enabled: true,
       guildOnly: false,
-      aliases: ['info'],
+      aliases: [],
       permLevel: 0
     };
     
     exports.help = {
-      name: "about",
+      name: "status1",
       description: "Bot Info",
       usage: "about"
     };
