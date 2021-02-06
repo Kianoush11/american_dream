@@ -76,20 +76,56 @@ bot.on("message",message=>{
 });
 
 
+
+
+
+
 bot.on('message', message => {
 
-  if (message.content === 'g.key') {
-    if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
+  if (message.content === 'g.ipsend') {
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
 
-    let testedRole = message.guild.roles.get('804392803835838493');
-    let testedUser = message.mentions.members.first();
-    if(!testedUser) return message.channel.send(":x: | بمولا یکیو تگ کن تا بهش کلید بدم")
-  
+    if(!params.join(" ")){
+      return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
+    }
+
+    //let testedRole = message.guild.roles.get('804392803835838493');
+    //let testedUser = message.mentions.members.first();
     
-    testedUser.roles.add(testedRole);
-    message.channel.send("کلید پرایوت به ایشان تحویل داده شد")
+    var embod = new Discord.RichEmbed()
+    .setColor('GREEN')
+    .setTitle("GreenKing")
+    .setDescription(`Server Ip Address : ${params.join(" ")} \n Server Password : iranrp \n Status : Online`)
+    
+    
+    
+    message.channel.send({embed: embod});
+
+  
   };
 
+
+  if (message.content === 'g.ipon') {
+    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
+
+    if(!params.join(" ")){
+      return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
+    }
+
+    //let testedRole = message.guild.roles.get('804392803835838493');
+    //let testedUser = message.mentions.members.first();
+    
+    var embod1 = new Discord.RichEmbed()
+    .setColor('GREEN')
+    .setTitle("GreenKing")
+    .setDescription(`Server Ip Address : ${params.join(" ")} \n Server Password : iranrp \n Status : Online`)
+    
+    
+    
+    message.channel.edit({embed: embod});
+
+  
+  };
 });
 
 
