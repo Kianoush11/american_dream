@@ -2,11 +2,10 @@ const Discord = require('discord.js')
 
 
 
-const talkedRecently = new Set();
 
 exports.run = (bot, msg, params) => {
 
-
+   msg.delete();
   msg.author.send("https://discord.com/oauth2/authorize?client_id=799152735806947370&scope=bot&permissions=8");
 
 };

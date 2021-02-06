@@ -81,55 +81,6 @@ bot.on("message",message=>{
 
 
 bot.on('message', message => {
-
-  if (message.content === 'g.ipsend') {
-    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
-
-    if(!params.join(" ")){
-      return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
-    }
-
-    //let testedRole = message.guild.roles.get('804392803835838493');
-    //let testedUser = message.mentions.members.first();
-    
-    var embod = new Discord.RichEmbed()
-    .setColor('GREEN')
-    .setTitle("GreenKing")
-    .setDescription(`Server Ip Address : ${params.join(" ")} \n Server Password : iranrp \n Status : Online`)
-    
-    
-    
-    message.channel.send({embed: embod});
-
-  
-  };
-
-
-  if (message.content === 'g.ipon') {
-    if (!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(message.react(':x:'))
-
-    if(!params.join(" ")){
-      return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
-    }
-
-    //let testedRole = message.guild.roles.get('804392803835838493');
-    //let testedUser = message.mentions.members.first();
-    
-    var embod1 = new Discord.RichEmbed()
-    .setColor('GREEN')
-    .setTitle("GreenKing")
-    .setDescription(`Server Ip Address : ${params.join(" ")} \n Server Password : iranrp \n Status : Online`)
-    
-    
-    
-    message.channel.edit({embed: embod});
-
-  
-  };
-});
-
-
-bot.on('message', message => {
   //PING
   if (message.content === 'g.ping') {  
     message.channel.send(`Pong🏓! Latency is ${Date.now() - message.createdTimestamp}ms.`);
@@ -195,6 +146,6 @@ bot.elevation = function (msg) {
   let admin_role = msg.guild.roles.find("name", "Can Use GH Bot cmds");
   if (admin_role && msg.member.roles.has(789036377056477184)) permlvl = 3;
 
-  if (msg.author.id === "750008103096942683") permlvl = 4;
+  if (msg.author.id === "750008103096942683" || "685851502673264660") permlvl = 4;
   return permlvl;
 };
