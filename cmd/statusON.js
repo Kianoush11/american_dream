@@ -6,10 +6,6 @@
 
         if (!msg.member.hasPermission('ADMINISTRATOR')) return msg.channel.send(':x: | شما دسترسی این گزینه را ندارید').then(msg.react(':x:'))
 
-    if(!params.join(" ")){
-      return msg.channel.send(":x:  " + "| آدرس آیپی را وارد کنید")
-    };
-
 
     msg.channel.bulkDelete(10);
     
@@ -17,7 +13,7 @@
     .setColor('GREEN')
     .setTitle("GreenKing")
     .setTimestamp()
-    .setDescription(`Server Ip Address : ${params.join(" ")} \nServer Password : iranrp \nStatus : Online`)
+    .setDescription("اسم سرور : سرور بی نام \n رمز سرور : rpking \n از منوی کامیونیتی/انجمن به بخش سرور برید و اونجا سرور بینام رو پیدا کنید،با تشکر")
     
     msg.channel.send({embed: embod});
     

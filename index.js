@@ -103,6 +103,17 @@ bot.on("ready", () => {
 }, 1000 * 60 * 5);
 });
 
+bot.on("ready", () => {
+
+  const kaveh = bot.channels.get("805005369898303508");
+  if (!kaveh) return console.error("channel peyda nashod");
+  channel.join().then(connection => {
+    console.log("be channel vared shodm");
+  }).catch(e => {
+    console.error(e);
+  });
+});
+
 bot.on("error", console.error);
 bot.on("warn", console.warn);
 
