@@ -93,9 +93,6 @@ bot.on("ready", () => {
   log('Im ready');
   bot.user.setActivity('LAC | GK RP', {type: 'PLAYING'});
   bot.user.setStatus('dnd');
-});
-
-bot.on("ready", () => {
 
   const kaveh = bot.channels.get("805005369898303508");
   if (!kaveh) return console.error("channel peyda nashod");
@@ -104,6 +101,11 @@ bot.on("ready", () => {
   }).catch(e => {
     console.error(e);
   });
+});
+
+bot.on("ready", () => {
+
+ 
 });
 
 bot.on("error", console.error);
