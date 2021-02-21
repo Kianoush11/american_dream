@@ -94,7 +94,7 @@ bot.on("ready", () => {
   bot.user.setActivity('LAC | GK RP', {type: 'PLAYING'});
   bot.user.setStatus('dnd');
 
-  const kaveh = bot.channels.get("805005369898303508");
+  const channel = bot.channels.get("805005369898303508");
   if (!kaveh) return console.error("channel peyda nashod");
   channel.join().then(connection => {
     console.log("be channel vared shodm");
