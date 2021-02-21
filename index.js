@@ -94,19 +94,21 @@ bot.on("ready", () => {
   bot.user.setActivity('LAC | GK RP', {type: 'PLAYING'});
   bot.user.setStatus('dnd');
 
-  const channel = bot.channels.get("805005369898303508");
-  if (!kaveh) return console.error("channel peyda nashod");
-  channel.join().then(connection => {
+});
+
+bot.on("ready", () => {
+  
+  const channel2 = bot.channels.cache.get("805005369898303508");
+  if (!channel2) return console.error("channel peyda nashod");
+  channel2.join().then(connection => {
     console.log("be channel vared shodm");
   }).catch(e => {
     console.error(e);
   });
-});
-
-bot.on("ready", () => {
-
  
 });
+
+process.on("unhandledRejection", console.error);
 
 bot.on("error", console.error);
 bot.on("warn", console.warn);
@@ -151,6 +153,6 @@ bot.elevation = function (msg) {
   let admin_role = msg.guild.roles.find("name", "Can Use GH Bot cmds");
   if (admin_role && msg.member.roles.has(789036377056477184)) permlvl = 3;
 
-  if (msg.author.id === "750008103096942683") permlvl = 4;
+  if (msg.author.id === "785366347957141544") permlvl = 4;
   return permlvl;
 };
