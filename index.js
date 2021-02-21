@@ -88,19 +88,11 @@ bot.on('message', message => {
 });
 
 bot.on("ready", () => {
-
-
   //ACTIVE
   log(`Ready to serve ${bot.users.size} users, in ${bot.channels.size} channels of ${bot.guilds.size} servers.`);
   log('Im ready');
-  setInterval(() => {
-    targetGuild = bot.guilds.get('805002730564354078')
-    if(targetGuild) {
-        bot.user.setActivity('With ' + targetGuild.memberCount + ' Members.', {type: 'PLAYING'})
-              .then(console.log)
-              .catch(console.error);
-    }
-}, 1000 * 60 * 5);
+  bot.user.setActivity('LAC | GK RP', {type: 'PLAYING'});
+  bot.user.setStatus('dnd');
 });
 
 bot.on("ready", () => {
