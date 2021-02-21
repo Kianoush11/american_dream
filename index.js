@@ -96,17 +96,7 @@ bot.on("ready", () => {
 
 });
 
-bot.on("ready", () => {
-  
-  const channel2 = bot.channels.cache.get("805005369898303508");
-  if (!channel2) return console.error("channel peyda nashod");
-  channel2.join().then(connection => {
-    console.log("be channel vared shodm");
-  }).catch(e => {
-    console.error(e);
-  });
- 
-});
+
 
 process.on("unhandledRejection", console.error);
 
