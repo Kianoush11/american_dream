@@ -30,7 +30,7 @@ var caty = [
     var invite = new Discord.RichEmbed()
      .setTitle(Quote[Math.floor(Math.random() * Quote.length)])
      .setImage(caty[Math.floor(Math.random() * caty.length)])
-     .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
+     .setFooter("P A S C A L")
      .setColor('RANDOM')
 
       msg.channel.send({embed: invite});

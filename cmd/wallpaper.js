@@ -44,7 +44,7 @@ var Wallpaper = [
      var invite = new Discord.RichEmbed()
      .setTitle("یک والپیپر مناسب شما")
      .setImage(Wallpaper[Math.floor(Math.random() * Wallpaper.length)])
-     .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
+     .setFooter("P A S C A L")
      .setColor('RANDOM')
 
       msg.channel.send({embed: invite});

@@ -4,12 +4,12 @@ exports.run = (bot, msg, params) => {
 
   var invite = new Discord.RichEmbed()
 
-          .setTitle("**𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠**", true)
+          .setTitle("**P A S C A L**", true)
           .addField("__**" + "Developed In : " + "**__", ":flag_ir: by Kavisho with :heart:", true)
           .addField("__**" + "Code Language : " + "**__", "Javascript <:java:785151723207393300>", false)
           .addField("__**" + "Version : " + "**__", " 1.0 :robot: ", false)
-		      .addField("__**" + "Bot Status :" + "**__", "Configuring 🔧 ", true)
-          .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
+		      .addField("__**" + "Bot Status :" + "**__", "Online", true)
+          .setFooter("P A S C A L")
           .setColor('RANDOM')
           //<:frozen:780376909451624468>
   msg.channel.send({embed: invite});

@@ -96,10 +96,6 @@ bot.on("ready", () => {
 
 });
 
-
-
-process.on("unhandledRejection", console.error);
-
 bot.on("error", console.error);
 bot.on("warn", console.warn);
 

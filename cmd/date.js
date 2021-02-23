@@ -11,7 +11,7 @@ exports.run = (bot, msg, params) => {
 
          .setTitle("Current Time :")
          .setDescription(currentDateAndTime)
-         .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
+         .setFooter("P A S C A L")
         
           .setColor("0x#FF0000")
 

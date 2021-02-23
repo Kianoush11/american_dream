@@ -11,7 +11,7 @@ exports.run = (bot, msg, params) => {
       .addField("**" + "User Info" + "**", " g.userinfo", false)
       .addField("**" + "Highlighter" + "**", " :rotating_light: g.highlight", false)
       .addField("**" + "Aparat Account Info" + "**", " g.aparat", false)  
-	    .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠")
+	    .setFooter("P A S C A L")
       .setColor("RANDOM")
 
   msg.channel.send({embed: invite});
