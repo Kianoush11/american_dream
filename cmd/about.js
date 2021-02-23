@@ -4,10 +4,10 @@ exports.run = (bot, msg, params) => {
 
   var invite = new Discord.RichEmbed()
 
-          .setTitle("**P A S C A L**", true)
+          .setTitle("**P A S C A L (RolePlay Edition)**", true)
           .addField("__**" + "Developed In : " + "**__", ":flag_ir: by Kavisho with :heart:", true)
           .addField("__**" + "Code Language : " + "**__", "Javascript <:java:785151723207393300>", false)
-          .addField("__**" + "Version : " + "**__", " 1.0 :robot: ", false)
+          .setDescription("**برای استفاده از جنریتور کد p.help را بنویسید.باتشکر**")
 		      .addField("__**" + "Bot Status :" + "**__", "Online", true)
           .setFooter("P A S C A L")
           .setColor('RANDOM')

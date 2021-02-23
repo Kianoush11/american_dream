@@ -29,7 +29,7 @@ bot.on("message", msg => {
 
   
 
-  var prefix = ("g.");
+  var prefix = ("p.");
 
   if (msg.author.bot) return;
   if (!msg.content.startsWith(prefix)) return;
@@ -52,28 +52,6 @@ bot.on("message", msg => {
   
 });
 
-bot.on("message",message=>{
-  //DMALL
-  if(message.author.equals(bot.user)) return;
-  if (message.author.bot) return; 
-  let MessageArr = message.content.split(" ");
-  let cmd = MessageArr[0];
-  let args = MessageArr.slice(1);
-  if(cmd == "g.9393902"){
-      if(!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(":x: | You not have enough Permission to do that.");
-      let messagee = args.join(" ");
-      if(!messagee) return message.channel.send(":x: | Cannot Send Blank Message");
-      else{
-          message.guild.members.forEach(member=>{
-              member.send(messagee).then(()=>{
-                  console.log("sent mesasge to: "+member.user.tag+" Successfully");
-              }).catch(function(){
-                  console.log("An error occured to dm: "+member.user.tag+".");
-              });
-          })
-      }
-  }
-});
 
 
 
@@ -82,7 +60,7 @@ bot.on("message",message=>{
 
 bot.on('message', message => {
   //PING
-  if (message.content === 'g.ping') {  
+  if (message.content === 'p.ping') {  
     message.channel.send(`Pong🏓! Latency is ${Date.now() - message.createdTimestamp}ms.`);
   }
 });

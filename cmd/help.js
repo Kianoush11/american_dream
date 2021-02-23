@@ -5,10 +5,7 @@ exports.run = (bot, msg, params) => {
   var invite = new Discord.RichEmbed()
 
       .setTitle("**Sir,How i can help you?**")
-      .addField("**" + " Fun & Meme :laughing: " + "**", "  g.fun", true)
-      .addField("**" + " Tools :tools: " + "**", " g.tools", false)
-      .addField("**" + " Moderation :closed_lock_with_key:" + "**", "g.mod", false)
-		  .addField("**" + " WaitWut <:normal:779270062087077908> " + "**", " g.wat ", false)
+      .addField("**" + "جنراتور،انتخاب تصادفی یک جایزه برای شما" + "**", "p.gen", false)
 		  .setFooter("P A S C A L")
       .setColor("0x#295d7f")
 

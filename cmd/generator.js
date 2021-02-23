@@ -61,7 +61,7 @@ const generator = [
 } else {
 
   var emx = new Discord.RichEmbed()
-  .setTitle("**𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠**", true)
+  .setTitle("**P A S C A L**", true)
   //.setDescription(generator[Math.floor(Math.random() * generator.length)])
   .setDescription("این کد در آپدیت است")
 //  .setFooter("𝐺𝑟𝑒𝑒𝑛𝐻𝑖𝑙𝑙𝑠 | در صورت برنده شدن به اونر و یا لیدر ها در چت پیغام دهید")
